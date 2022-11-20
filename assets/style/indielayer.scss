@@ -1,0 +1,38 @@
+@import "main.scss";
+
+.x-drawer > div {
+	transition: all 0.5s ease;
+	background-color: $light-bg;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg-secondary;
+		color: $dark-color;
+	}
+}
+
+.x-button {
+	transition: all 0.5s ease;
+	background-color: $light-bg;
+	color: $light-color;
+	border: 1px solid transparent !important;
+	outline: none !important;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg-secondary;
+		color: $dark-color;
+	}
+
+	&:hover {
+		background-color: $light-bg-secondary;
+		color: $light-color;
+
+		html[class="dark-mode"] & {
+			background-color: $dark-bg;
+			color: $dark-color;
+		}
+	}
+}
+
+a > *.inline-flex {
+	display: inline;
+}

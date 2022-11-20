@@ -1,0 +1,48 @@
+@import "main.scss";
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: $light-bg-tertiary;
+
+	html[class="dark-mode"] & {
+		color: $dark-color;
+		background-color: $dark-bg-tertiary;
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $primary;
+}
+
+html,
+body {
+	transition: all 0.5s ease;
+	font-family: "League Spartan", sans-serif;
+	color: $light-color;
+	background-color: $light-bg;
+
+	html[class="dark-mode"] & {
+		color: $dark-color;
+		background-color: $dark-bg;
+	}
+
+	overflow-x: hidden;
+}
+
+footer {
+	transition: all 0.5s ease;
+	color: $light-color;
+	background-color: transparent !important;
+	min-height: 10vh;
+
+	html[class="dark-mode"] & {
+		color: $dark-color;
+	}
+}
+
+a {
+	color: $primary;
+}

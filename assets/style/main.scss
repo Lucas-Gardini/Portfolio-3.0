@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+// LIGHT MODE
+$light-color: #272727;
+$light-bg: #fbfcfe;
+$light-bg-secondary: #c0c1c3;
+$light-bg-tertiary: #d3dce5;
+
+// DARK MODE
+$dark-color: #ebf4f1;
+$dark-bg: #232a2f;
+$dark-bg-secondary: #1a2023;
+$dark-bg-tertiary: #101415;
+
+// GLOBAL
+$primary: #41f0d1;
+$secondary: #f0f041;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	min-height: 90vh;
+	padding-top: 70px;
+}
+
+.app-bg {
+	transition: all 0.5s ease;
+	background-color: $light-bg;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg;
+		color: $dark-color;
+	}
+}
+
+.app-bg-secondary {
+	transition: all 0.5s ease;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg-secondary;
+		color: $dark-color;
+	}
+}
+
+.text-primary {
+	color: $primary;
+}
+
+.drawer-link {
+	position: relative;
+
+	&.active::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 4px;
+		height: 100%;
+		background-color: $primary;
+		border-top-right-radius: 25%;
+		border-bottom-right-radius: 25%;
+	}
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(1.2);
+		background-color: $light-bg-secondary;
+	}
+
+	html[class="dark-mode"] &:hover {
+		background-color: $dark-bg;
+		color: $dark-color;
+	}
+}
