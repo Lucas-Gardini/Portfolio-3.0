@@ -1,42 +1,17 @@
-# Nuxt 3 Minimal Starter
+# Meu portfólio pessoal feito com Nuxt 3!
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+## Como rodar o projeto
 
 ```bash
-# yarn
-yarn install
+# instalar dependências
+$ yarn install
 
-# npm
-npm install
+# rodar em modo de desenvolvimento
+$ yarn dev
 
-# pnpm
-pnpm install --shamefully-hoist
+# gerar build para produção
+$ yarn build
+
+# rodar build em modo de produção
+$ yarn start
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
