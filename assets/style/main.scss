@@ -21,6 +21,7 @@ $secondary: #f0f041;
 	flex-direction: column;
 	min-height: 90vh;
 	padding-top: 70px;
+	padding-bottom: 70px;
 }
 
 .app-bg {
@@ -38,6 +39,25 @@ $secondary: #f0f041;
 
 	html[class="dark-mode"] & {
 		background-color: $dark-bg-secondary;
+		color: $dark-color;
+	}
+}
+
+.app-bg-tertiary {
+	transition: all 0.5s ease;
+	background-color: $light-bg-tertiary;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg-tertiary;
+		color: $dark-color;
+	}
+}
+
+.app-text {
+	transition: all 0.5s ease;
+	color: $light-color;
+
+	html[class="dark-mode"] & {
 		color: $dark-color;
 	}
 }
@@ -70,5 +90,28 @@ $secondary: #f0f041;
 	html[class="dark-mode"] &:hover {
 		background-color: $dark-bg;
 		color: $dark-color;
+	}
+}
+
+.app-color-change {
+	transition: all 0.5s ease;
+	background-color: $light-bg;
+	color: $light-color;
+	border: 1px solid transparent !important;
+	outline: none !important;
+
+	html[class="dark-mode"] & {
+		background-color: $dark-bg-secondary;
+		color: $dark-color;
+	}
+
+	&:hover {
+		background-color: $light-bg-secondary;
+		color: $light-color;
+
+		html[class="dark-mode"] & {
+			background-color: $dark-bg;
+			color: $dark-color;
+		}
 	}
 }

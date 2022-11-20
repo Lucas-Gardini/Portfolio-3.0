@@ -6,6 +6,12 @@ const colorMode = useColorMode();
 
 const route = useRoute();
 const name = computed(() => route.name);
+
+watch(name, () => {
+	if (drawer) {
+		toggleDrawer();
+	}
+});
 </script>
 
 <template>
@@ -13,7 +19,7 @@ const name = computed(() => route.name);
 		<template #header>
 			<div class="flex flex-row border-b p-4 text-lg font-semibold app-bg">
 				<p class="mt-auto mb-auto">Lucas Gardini Dias</p>
-				<IlButton ghost class="w-1/12 ml-auto" @click="toggleDrawer">
+				<IlButton ghost class="w-1/12 ml-auto app-text" @click="toggleDrawer">
 					<XIcon />
 				</IlButton>
 			</div>
@@ -62,7 +68,12 @@ const name = computed(() => route.name);
 		</ul>
 		<template #footer>
 			<div class="border-t p-4 app-bg">
-				<IlButton block light @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'">
+				<IlButton
+					class="app-color-change"
+					block
+					light
+					@click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
+				>
 					Modo {{ colorMode.value === "dark" ? "escuro" : "claro" }}
 				</IlButton>
 			</div>
