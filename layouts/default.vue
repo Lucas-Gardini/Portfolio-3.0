@@ -1,7 +1,9 @@
 <template>
 	<main>
-		<LayoutHeader />
-		<slot />
-		<LayoutFooter />
+		<ClientOnly>
+			<LayoutHeader />
+			<slot />
+			<LayoutFooter />
+		</ClientOnly>
 	</main>
 </template>
